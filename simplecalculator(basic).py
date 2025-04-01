@@ -1,3 +1,4 @@
+#taking input from user
 while True:
     print("Enter two nubers:")
     num1=int(input("Enter first number:"))
@@ -10,6 +11,7 @@ while True:
     print("5.Exit")
     operation=int(input("Enter your choice:"))
     if(operation in [1,2,3,4,5]):
+#performing action based on user input
         if operation==1:
             result=num1+num2
             print("Sum:",result)
@@ -28,6 +30,7 @@ while True:
         elif operation==5:
              print("Exiting")
              break
+#exiting is entered an invalid choice
 else:
     print("Invalid choice")
 

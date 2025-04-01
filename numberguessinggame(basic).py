@@ -1,4 +1,5 @@
 import random
+#allowing user to choose difficulty level
 def set_difficulty(level_chosen):
     if level_chosen == 'easy':
         return 10  
@@ -6,6 +7,7 @@ def set_difficulty(level_chosen):
         return 5   
     else:
         return None
+#allowing user to guess the number
 def game():
     print("Welcome to the Number Guessing Game!")
     print("I'm thinking of a number between 1 and 100.")
@@ -16,6 +18,7 @@ def game():
         return
     answer = random.randint(1, 100)
     guessed_number = None
+    #comparing user input with answer
     while guessed_number != answer and attempts > 0:
         print(f"You have {attempts} attempts remaining.")
         guessed_number = int(input("Guess a number: "))       
@@ -28,6 +31,7 @@ def game():
             print(f"It took you {10 - attempts + 1} attempts.")
             return
         attempts -= 1
+#exiting if the user is out of attempts
     if attempts == 0:
         print(f"You've run out of attempts. The correct number was {answer}. You lose!")
 
